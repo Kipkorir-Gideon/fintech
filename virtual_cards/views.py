@@ -8,7 +8,7 @@ from .models import VirtualCard
 from .serializers import VirtualCardSerializer
 
 
-class VirtualCreateCardView(APIView):
+class VirtualCardCreateView(APIView):
     permission_classes = [IsAuthenticated]
     
     def post(self, request):

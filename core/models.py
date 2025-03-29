@@ -27,7 +27,7 @@ class Transaction(models.Model):
     )
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    amount = models.DecimalField(max_digit=12, decimal_place=2)
+    amount = models.DecimalField(max_digits=12, decimal_places=2)
     currency = models.CharField(max_length=3)
     transaction_type = models.CharField(max_length=20, choices=TRANSACTION_TYPES)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
