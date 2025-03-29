@@ -42,14 +42,14 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # 'core',
-    # 'users',
-    # 'payments',
-    # 'invoices',
-    # 'virtual_cards',
-    # 'virtual_accounts',
-    # 'wallets',
-    # 'notifications',
+    'core',
+    'users',
+    'payments',
+    'invoices',
+    'virtual_cards',
+    'virtual_accounts',
+    'wallets',
+    'notifications',
 ]
 
 MIDDLEWARE = [
