@@ -4,5 +4,5 @@ from .views import PaymentView
 
 
 urlpatterns = [
-    path('payments/', PaymentView.as_view(), name='payments'),
+    path('process/', PaymentView.as_view(), name='process'),
 ]

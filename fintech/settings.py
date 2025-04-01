@@ -50,9 +50,12 @@ INSTALLED_APPS = [
     'virtual_accounts',
     'wallets',
     'notifications',
+    'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -158,3 +161,25 @@ REST_FRAMEWORK = {
 PAYMENT_API_KEY = config('PAYMENT_API_KEY')
 EXCHANGE_RATE_API_KEY = config('EXCHANGE_RATE_API_KEY')
 CARD_API_KEY = config('CARD_API_KEY')
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "authorization",
+    "content-type",
+    "origin",
+    "x-csrftoken",
+]
